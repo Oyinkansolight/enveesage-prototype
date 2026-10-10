@@ -1,12 +1,26 @@
 # EnveeSage — throwaway design exploration
 
-Nigeria-first curated perfume and sample retailer. Three structurally different directions answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
+Nigeria-first curated perfume and sample retailer. Six structurally different directions (two rounds of three) answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
 
-Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows or keyboard left/right to switch. No dependency install; Python 3 and npm are sufficient.
+Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows, the dropdown in the switcher, or keyboard left/right to switch between A–F.
+
+## View on any device
+
+- **Send the file:** `npm run build:share` writes `dist/index.html`, one self-contained file (hero image inlined). AirDrop, email or WhatsApp it; it opens in any phone, tablet or desktop browser, offline too (fonts fall back to system fonts without internet).
+- **Same Wi-Fi:** `npm run prototype:lan` prints a `http://<your-mac-ip>:4173/...` URL any device on the network can open.
+- **Public link:** host `dist/index.html` on any static host (GitHub Pages, Netlify Drop). Not done automatically. No dependency install; Python 3 and npm are sufficient.
 
 - A — Editorial boutique: photography, a curated edit, then sample education.
 - B — Guided studio: a three-question finder, then paths for newcomers, gifts and enthusiasts.
 - C — Scent library: searchable/filterable catalog, saved discoveries and profile comparison.
+
+Round two (added without changing A–C):
+
+- D — Scent swipe: one full-bleed card at a time; drag or tap keep/skip; keeps fill a five-vial sample box.
+- E — Concierge chat: WhatsApp-style scripted assistant (understands e.g. “oud under 100k”, “owambe”, “delivery to Abuja”), inline product cards, and a visible “what Sage knows” panel you can edit.
+- F — Scent map: tap a fresh↔warm / soft↔bold map (or use sliders) to drop a pin; scents rank by closeness, with family filters.
+
+Round two adds three fictional scents (Lagos Rain, Oud Majlis, Velvet Hibiscus) used only by D–F; A–C still show the original three.
 
 Scents, prices, delivery estimates, stock and recommendations are fictional. No live payment, accounts or external mutations. State is in memory and resets on reload; only the selected variant is in the URL. No final design is selected. Do not merge prototype code into production.
 
@@ -15,6 +29,9 @@ Scents, prices, delivery estimates, stock and recommendations are fictional. No 
 A: warm photographic magazine, serif hierarchy, generous space. Hero → edit → sampling.
 B: approachable peach studio with one question at a time. Intro → finder → discovery paths → edit.
 C: evergreen catalog workspace, compact sidebar, information-rich rows. Search → filters → profiles → comparison.
+D: aubergine night, coral accents, mobile-first card deck. Instinct → keep/skip → sample box.
+E: deep-green messaging app on cream. Conversation → suggestions → transparent profile → human hand-off.
+F: off-white with a mint-to-amber gradient map. Pin → ranked closeness → sample.
 
 Entrance fade, product hover lift and drawer transition. Reduced motion is supported. Controls have visible focus; dialogs contain keyboard focus and close on Escape. These are prototype affordances, not a production accessibility certification.
 
