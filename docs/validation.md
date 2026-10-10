@@ -13,7 +13,7 @@ Checked with the T3 collaborative browser and HTML preview. No unit tests were a
 - A/B/C measured at 390px mobile and 1280px desktop: document width equaled viewport width, without horizontal overflow.
 - Visual review of all three layouts, image loading, Google-font fallback setup and inline HTML rendering at 728px.
 
-Later heuristic adjustment uses occasion as a fallback and gifts as a discovery-set suggestion. This is intentionally simple preference logic, not a validated fragrance predictor.
+Verified the later gift branch: Warm + under ₦50,000 + gift suggests the three-scent ₦10,500 discovery set. Occasion is otherwise a fallback after mood/budget. This is intentionally simple preference logic, not a validated fragrance predictor. Inline HTML variant cycling A → B → C → A completed without runtime errors at 390px.
 
 ## Limits
 
