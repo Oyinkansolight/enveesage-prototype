@@ -8,7 +8,7 @@ Run `npm run prototype` from this directory, then visit http://localhost:4173/pr
 
 - **Send the file:** `npm run build:share` writes `dist/index.html`, one self-contained file (hero image inlined). AirDrop, email or WhatsApp it; it opens in any phone, tablet or desktop browser, offline too (fonts fall back to system fonts without internet).
 - **Same Wi-Fi:** `npm run prototype:lan` prints a `http://<your-mac-ip>:4173/...` URL any device on the network can open.
-- **Public link:** host `dist/index.html` on any static host (GitHub Pages, Netlify Drop). Not done automatically. No dependency install; Python 3 and npm are sufficient.
+- **Public link:** https://oyinkansolight.github.io/enveesage-prototype/?variant=A (GitHub Pages, serving this branch). After changes, run `npm run build:share`, commit, and push to update it. No dependency install; Python 3 and npm are sufficient.
 
 - A — Editorial boutique: photography, a curated edit, then sample education.
 - B — Guided studio: a three-question finder, then paths for newcomers, gifts and enthusiasts.
