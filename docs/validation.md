@@ -50,3 +50,17 @@ Browser checks on the actual self-contained `dist/index.html`:
 - JavaScript syntax checked with `node --check`; no runtime errors captured during the sample flow. Inline HTML preview checked separately.
 
 Limits: browser viewport emulation, not physical-device testing. No screen-reader audit, usability interviews, real catalog, authentication, orders or payments. All monetary values and scent claims are fictional examples. Verdict remains pending user review.
+
+
+## H — The Feeling Counter (11 October 2026)
+
+User rejected G as too similar to earlier work. H starts with an independent visual system, catalog, cart, modal and sample-flight UI. A–G are retained.
+
+- Desktop 1440/1280, tablet 768, phone 390 and narrow phone 320 inspected or measured; no horizontal overflow. Phone cards change from portrait columns to stacked landscape strips.
+- Bright opens two scents. Mix Yuzu, Please., Skin / 01 and Midnight Standard: ₦11,100. A fourth is rejected. Replace Skin / 01 with Afterglow: ₦11,800. Flight transfers once to H bag and clears; FCT illustrative delivery produces ₦16,800. The A–G bag stays independent.
+- Nose view reveals the note profile. Full-bottle Skin / 01 is ₦64,000. Detail-to-sample, flight-modal removal, flight-modal add-to-bag, and removal of a bottle were exercised.
+- Native dialog receives focus and contains Tab navigation; ArrowRight does not switch variants while the dialog is open; Escape closes it.
+- Portable build inspected: all three H image URLs are data URIs and loaded at all measured widths. Builder now resolves literal image paths inside JavaScript as well as HTML.
+- No runtime errors captured during the selection/cart flow. Syntax checked with Node. Checkout explicitly stops without creating an order or collecting payment.
+
+Limits remain: no actual users, physical-device tests or formal accessibility audit; fictional catalog/pricing and illustrative delivery only. This is a new proposal awaiting user judgment, not a validated winner.

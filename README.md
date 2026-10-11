@@ -1,10 +1,10 @@
 # EnveeSage — throwaway design exploration
 
-Nigeria-first curated perfume and sample retailer. Seven directions (the original two rounds of three, plus Astra’s Scent Wardrobe) answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
+Nigeria-first curated perfume and sample retailer. Eight directions (A–F, Astra’s Scent Wardrobe G, and the independent Feeling Counter H) answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
 
-Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows, the dropdown in the switcher, or keyboard left/right to switch between A–G.
+Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows, the dropdown in the switcher, or keyboard left/right to switch between A–H.
 
-**Latest direction:** [G — The Scent Wardrobe](https://oyinkansolight.github.io/enveesage-prototype/?variant=G). All six earlier directions remain available in the switcher.
+**Latest direction:** [H — The Feeling Counter](https://oyinkansolight.github.io/enveesage-prototype/?variant=H). All seven earlier directions remain available in the switcher.
 
 ## View on any device
 
@@ -28,6 +28,8 @@ Round two adds three fictional scents (Lagos Rain, Oud Majlis, Velvet Hibiscus) 
 
 Scents, prices, delivery estimates, stock and recommendations are fictional. No live payment, accounts or external mutations. State is in memory and resets on reload; only the selected variant is in the URL. No final design is selected. Do not merge prototype code into production.
 
+H — The Feeling Counter: independent interface and six new fictional scents. Three photographic feeling cards open pairs of scents, with plain-language and note-profile views. Pick a 1–3 sample tasting flight, review it on a yellow receipt, or open full-bottle details. Uses its own bag and native dialogs; no A–G storefront components.
+
 ## Art direction
 
 A: warm photographic magazine, serif hierarchy, generous space. Hero → edit → sampling.
@@ -37,7 +39,9 @@ D: aubergine night, coral accents, mobile-first card deck. Instinct → keep/ski
 E: deep-green messaging app on cream. Conversation → suggestions → transparent profile → human hand-off.
 F: off-white with a mint-to-amber gradient map. Pin → ranked closeness → sample.
 
-G: warm ivory, ink and oxblood; large serif wordmark over original campaign photography. Campaign → occasion edit → sample ritual → fragrance guides. The question: can a visually distinctive storefront make sampling feel like a natural part of shopping? This is Astra’s recommendation to evaluate, not a user-validated selection.
+G: warm ivory, ink and oxblood; large serif wordmark over original campaign photography. Campaign → occasion edit → sample ritual → fragrance guides. The question: can a visually distinctive storefront make sampling feel like a natural part of shopping? User feedback: too close to the earlier storefront; retained for comparison.
+
+H: cobalt grotesk typography, acid-yellow sample receipt and three newly generated ingredient photographs. A working counter: choose a feeling → reveal a pair → pull samples into a flight. Staggered card entrance, image hover and contracting cards keep the interaction tactile.
 
 Entrance fade, product hover lift and drawer transition. Reduced motion is supported. Controls have visible focus; dialogs contain keyboard focus and close on Escape. These are prototype affordances, not a production accessibility certification.
 
@@ -52,3 +56,5 @@ Fonts: Google Fonts DM Sans / DM Serif Display, with local system fallbacks.
 Hero: AI-generated unbranded mood photography, not an actual stocked fragrance. Stored locally in `assets/editorial-hero.jpg`. Product bottle illustrations and all SKU details are concept placeholders.
 
 Additional campaign asset: `assets/wardrobe-campaign.jpg`, AI-generated unbranded concept photography for G. Both campaign images are embedded by `build:share`; the offline bundle is about 1.1 MB.
+
+H campaign images: `assets/counter-bright.jpg`, `counter-close.jpg` and `counter-deep.jpg`. All five local images, including JavaScript catalog references, are embedded in the portable build (about 1.8 MB). H remains a throwaway concept; its scent names and specifications are invented.
