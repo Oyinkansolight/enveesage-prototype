@@ -1,1 +1,18 @@
-{"name":"enveesage-throwaway-prototype","version":"0.0.0","private":true,"scripts":{"prototype":"python3 -m http.server 4173 --bind 127.0.0.1","prototype:lan":"sh scripts/serve-lan.sh","build:share":"python3 scripts/build-share.py"}}
+{
+  "name": "enveesage-throwaway-prototype",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "prototype": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "prototype:lan": "sh scripts/serve-lan.sh",
+    "build:share": "python3 scripts/build-share.py",
+    "build:gallery": "node scripts/build-gallery.mjs",
+    "build:all": "npm run build:share && npm run build:gallery"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

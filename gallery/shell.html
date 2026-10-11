@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f4ef"><title>EnveeSage — The Fragrance Rooms</title><meta name="description" content="Explore the EnveeSage fragrance rooms, or browse every scent in a simple list. An interactive design prototype."><style>/* GALLERY_CSS */</style></head>
+<body>
+<a class="skip-link" href="#catalog" id="skip">Skip to all fragrances</a>
+<header class="topbar">
+  <button class="wordmark" data-action="home" aria-label="EnveeSage, return to the atrium">EnveeSage<span class="brand-dot"></span></button>
+  <div class="topbar-title">THE FRAGRANCE ROOMS</div>
+  <div class="topbar-tools"><div class="mode-switch" role="group" aria-label="Shopping view"><button data-mode="gallery" aria-pressed="true">Explore in 3D</button><button data-mode="list" aria-pressed="false">Browse without 3D</button></div><button class="bag-button" data-action="bag" aria-label="Open your bag">Bag <span id="bag-count">0</span></button></div>
+</header>
+<nav class="room-nav" aria-label="Fragrance rooms" id="room-nav"></nav>
+<main>
+  <section class="gallery-view" id="gallery-view" aria-label="Walkable fragrance gallery">
+    <canvas id="scene" tabindex="0" aria-label="3D fragrance gallery. Drag to look, use W A S D or the on-screen controls to walk. Use the room buttons to jump directly, or Browse without 3D for the full catalog."></canvas>
+    <div class="scene-vignette" aria-hidden="true"></div>
+    <div class="loading-panel" id="loading"><span class="loading-dot"></span><p>Opening the rooms…</p><button data-mode="list">Browse the collection while you wait</button></div>
+    <aside class="room-info" id="room-info"></aside>
+    <div class="scene-controls">
+      <div class="walk-pad" aria-label="Walk controls"><button data-turn="left" aria-label="Turn left">↶</button><button data-move="forward" aria-label="Walk forward">↑</button><button data-turn="right" aria-label="Turn right">↷</button><button data-move="left" aria-label="Step left">←</button><button data-move="backward" aria-label="Walk backward">↓</button><button data-move="right" aria-label="Step right">→</button></div>
+      <div class="control-legend"><span>Drag to look · WASD to walk</span><button data-action="reset">Recenter view</button></div>
+    </div>
+    <div class="scene-utility"><button class="circle-button" data-action="map" aria-label="Open room map">⌘</button><button class="circle-button" data-action="help" aria-label="Navigation and motion settings">?</button></div>
+  </section>
+  <section class="catalog-view" id="catalog" hidden aria-label="Fragrance catalog">
+    <div class="catalog-heading"><div><p class="eyebrow">YOUR OWN WAY TO DISCOVER</p><h1 id="catalog-title">Every scent.<br>Within reach.</h1><p id="catalog-intro">Explore the collection at your own pace.</p></div><button class="text-button" data-mode="gallery">Step inside the rooms <span>↗</span></button></div>
+    <p id="fallback-message" class="fallback-message" hidden></p>
+    <div class="catalog-toolbar"><label class="search-label"><span aria-hidden="true">⌕</span><input type="search" id="catalog-search" placeholder="Search scents or notes" aria-label="Search scents or fragrance notes"></label><div class="format-switch" role="group" aria-label="Shopping size"><button data-size="sample" aria-pressed="true">2 ml samples</button><button data-size="bottle" aria-pressed="false">50 ml bottles</button></div><select id="price-filter" aria-label="Maximum bottle budget"><option value="all">Any bottle budget</option><option value="50000">Bottles under ₦50,000</option><option value="75000">Bottles up to ₦75,000</option></select></div>
+    <p class="catalog-count" id="catalog-count" role="status"></p><div id="product-grid" class="product-grid"></div>
+    <div class="catalog-footer"><span>Small samples. Space to decide.</span><p>Fictional concept collection. No orders or payments are processed.</p></div>
+  </section>
+</main>
+<div class="prototype-switcher" aria-label="Prototype version switcher"><button data-version="H" aria-label="Previous design">←</button><label><span>DESIGN PROTOTYPE · 9 DIRECTIONS</span><select id="version" aria-label="Choose design version"><option value="A">A / The Editorial Boutique</option><option value="B">B / The Guided Studio</option><option value="C">C / The Scent Library</option><option value="D">D / The Scent Swipe</option><option value="E">E / The Concierge Chat</option><option value="F">F / The Scent Map</option><option value="G">G / The Scent Wardrobe</option><option value="H">H / The Feeling Counter</option><option value="I" selected>I / The Fragrance Rooms</option></select></label><button data-version="A" aria-label="Next design">→</button></div>
+<div class="announcement" id="announcement" role="status" aria-live="polite"></div>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"></dialog>
+<noscript><div style="padding:150px 25px">This interactive prototype needs JavaScript. Fragrance rooms and a non-3D catalog are available when JavaScript is enabled.</div></noscript>
+<script>/* GALLERY_JS */</script>
+</body></html>

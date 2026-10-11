@@ -1,0 +1,13 @@
+import {build} from 'esbuild';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const result=await build({entryPoints:[path.join(root,'gallery/app.js')],bundle:true,minify:true,format:'iife',target:['es2020'],write:false,legalComments:'inline'});
+const css=await readFile(path.join(root,'gallery/styles.css'),'utf8');
+const shell=await readFile(path.join(root,'gallery/shell.html'),'utf8');
+const html=shell.replace('/* GALLERY_CSS */',()=>css).replace('/* GALLERY_JS */',()=>result.outputFiles[0].text.replaceAll('</script','<\\/script'));
+await mkdir(path.join(root,'dist'),{recursive:true});
+await writeFile(path.join(root,'gallery.html'),html);
+await writeFile(path.join(root,'dist/gallery.html'),html);
+console.log(`Built gallery.html and dist/gallery.html — ${(Buffer.byteLength(html)/1024).toFixed(0)} KB, self-contained Three.js prototype`);

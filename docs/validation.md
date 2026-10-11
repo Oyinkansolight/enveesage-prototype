@@ -64,3 +64,23 @@ User rejected G as too similar to earlier work. H starts with an independent vis
 - No runtime errors captured during the selection/cart flow. Syntax checked with Node. Checkout explicitly stops without creating an order or collecting payment.
 
 Limits remain: no actual users, physical-device tests or formal accessibility audit; fictional catalog/pricing and illustrative delivery only. This is a new proposal awaiting user judgment, not a validated winner.
+
+## I — The Fragrance Rooms (11 October 2026)
+
+Built with Three.js 0.186.1 and bundled into a 655 KB standalone HTML. Cmax implemented the procedural scene; Astra implemented and validated the integrated interface. A–H are retained.
+
+Integrated T3 browser checks:
+
+- Actual WebGL gallery visually inspected at 1280×900, 390×844 and 320×740. No horizontal overflow at either phone width in gallery or catalogue mode. Six bottles have equivalent named controls outside the canvas.
+- Room tab walks into the Silk Room; actual canvas raycast at Petal Theory opens its correct detail dialog. Modal pauses the scene, Escape resumes it. The phone room-scents shortcut opens the same detail.
+- Add Petal Theory sample (₦3,000), switch to catalogue, change rooms, return to 3D: bag persists and room synchronizes. Non-3D mode pauses scene rendering.
+- Add Midnight Standard sample (₦4,800), choose FCT delivery (illustrative ₦5,000): total ₦9,800. Earlier catalogue checks also covered quantity increments, sample/bottle pricing, notes search, budget filters and simulated checkout.
+- Room map returns to the Atrium while retaining the bag. Deep-linked Amber Room initializes at the correct pose. On-screen forward movement changes camera position by 0.5 m.
+- Reduce camera motion setting propagates to the engine; direct room changes complete without animated travel. System preference is wired through matchMedia; physical OS-setting changes were not exercised.
+- Induced actual WebGL context loss through WEBGL_lose_context. Catalogue fallback appeared, preserved selected room and existing bag, and stopped the scene. Separately, the explicit webgl=off initialization path displayed the fallback and all six products.
+- Fixed hidden-canvas resizing so switching to catalogue preserves buffer size instead of multiplying it by DPR. Verified 480×1110 buffer unchanged after hiding a 320×740 canvas.
+- Native dialog focus containment and Escape were exercised. Room-navigation re-rendering preserves focused room button. Back-forward cache lifecycle pauses/resumes instead of disposing a cached scene (code inspection).
+
+Cmax additionally exercised scene collision boundaries, animated room-to-room paths around the plinth, drag-to-look, keyboard blur cleanup, bottle and doorway picking, disposal/recreation, and desktop/portrait shelf framing in its isolated scene harness.
+
+Limits: emulated browser viewports, no physical device/GPU battery or frame-rate audit, no formal accessibility or screen-reader audit, no usability study. Hidden automation tabs were throttled, so no FPS claim is made. Scents, prices and shipping remain illustrative; checkout creates no order and collects no payment. Apple quality is an aspiration, not certification.
