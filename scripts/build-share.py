@@ -1,9 +1,20 @@
-# THROWAWAY: bundles prototype.html + hero image into one file you can AirDrop, email or WhatsApp to any device.
-import base64, pathlib
+# THROWAWAY: bundle the prototype and its local images into a portable HTML file.
+import base64
+import mimetypes
+import pathlib
+import re
+
 root = pathlib.Path(__file__).resolve().parent.parent
 html = (root / 'prototype.html').read_text()
-img = base64.b64encode((root / 'assets/editorial-hero.jpg').read_bytes()).decode()
-html = html.replace('src="assets/editorial-hero.jpg"', f'src="data:image/jpeg;base64,{img}"')
+
+def inline_image(match):
+    relative = match.group(1)
+    asset = root / relative
+    mime = mimetypes.guess_type(asset.name)[0] or 'application/octet-stream'
+    encoded = base64.b64encode(asset.read_bytes()).decode()
+    return f'src="data:{mime};base64,{encoded}"'
+
+html = re.sub(r'src="(assets/[^\"]+)"', inline_image, html)
 (root / 'dist').mkdir(exist_ok=True)
 (root / 'dist/index.html').write_text(html)
 print('Wrote dist/index.html (self-contained, %d KB)' % (len(html) // 1024))

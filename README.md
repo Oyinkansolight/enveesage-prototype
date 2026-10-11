@@ -1,8 +1,10 @@
 # EnveeSage — throwaway design exploration
 
-Nigeria-first curated perfume and sample retailer. Six structurally different directions (two rounds of three) answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
+Nigeria-first curated perfume and sample retailer. Seven directions (the original two rounds of three, plus Astra’s Scent Wardrobe) answer: **Which shopping/discovery structure gives beginners and enthusiasts confidence?**
 
-Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows, the dropdown in the switcher, or keyboard left/right to switch between A–F.
+Run `npm run prototype` from this directory, then visit http://localhost:4173/prototype.html?variant=A . Use the floating bottom arrows, the dropdown in the switcher, or keyboard left/right to switch between A–G.
+
+**Latest direction:** [G — The Scent Wardrobe](https://oyinkansolight.github.io/enveesage-prototype/?variant=G). All six earlier directions remain available in the switcher.
 
 ## View on any device
 
@@ -20,7 +22,9 @@ Round two (added without changing A–C):
 - E — Concierge chat: WhatsApp-style scripted assistant (understands e.g. “oud under 100k”, “owambe”, “delivery to Abuja”), inline product cards, and a visible “what Sage knows” panel you can edit.
 - F — Scent map: tap a fresh↔warm / soft↔bold map (or use sliders) to drop a pin; scents rank by closeness, with family filters.
 
-Round two adds three fictional scents (Lagos Rain, Oud Majlis, Velvet Hibiscus) used only by D–F; A–C still show the original three.
+G — The Scent Wardrobe: campaign-led storefront with occasion edits, sample/bottle switching, optional note detail, search and bottle budget filters, saved scents, a personal 1–3 sample edit, and a gift trio. Uses the full six-scent concept catalog.
+
+Round two adds three fictional scents (Lagos Rain, Oud Majlis, Velvet Hibiscus) used by D–G; A–C still show the original three.
 
 Scents, prices, delivery estimates, stock and recommendations are fictional. No live payment, accounts or external mutations. State is in memory and resets on reload; only the selected variant is in the URL. No final design is selected. Do not merge prototype code into production.
 
@@ -33,6 +37,8 @@ D: aubergine night, coral accents, mobile-first card deck. Instinct → keep/ski
 E: deep-green messaging app on cream. Conversation → suggestions → transparent profile → human hand-off.
 F: off-white with a mint-to-amber gradient map. Pin → ranked closeness → sample.
 
+G: warm ivory, ink and oxblood; large serif wordmark over original campaign photography. Campaign → occasion edit → sample ritual → fragrance guides. The question: can a visually distinctive storefront make sampling feel like a natural part of shopping? This is Astra’s recommendation to evaluate, not a user-validated selection.
+
 Entrance fade, product hover lift and drawer transition. Reduced motion is supported. Controls have visible focus; dialogs contain keyboard focus and close on Escape. These are prototype affordances, not a production accessibility certification.
 
 ## Research & decision
@@ -44,3 +50,5 @@ Prototype source captured on `prototype/enveesage-directions`. Verdict: **pendin
 Fonts: Google Fonts DM Sans / DM Serif Display, with local system fallbacks.
 
 Hero: AI-generated unbranded mood photography, not an actual stocked fragrance. Stored locally in `assets/editorial-hero.jpg`. Product bottle illustrations and all SKU details are concept placeholders.
+
+Additional campaign asset: `assets/wardrobe-campaign.jpg`, AI-generated unbranded concept photography for G. Both campaign images are embedded by `build:share`; the offline bundle is about 1.1 MB.

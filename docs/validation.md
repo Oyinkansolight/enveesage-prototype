@@ -33,3 +33,20 @@ Checked in the T3 browser at 1280px and the iPhone 12 Pro preset (390px), using 
 - F: a pin near fresh/soft ranked Lagos Rain nearest (93%); a pin top-right ranked Oud Majlis nearest; the Fresh filter dimmed four non-fresh dots. After moving two dots inward, all map labels stay inside the map at 390px.
 
 Not checked: real touch hardware, screen readers, landscape phones. The chat is keyword matching, not an AI model.
+
+
+## G — The Scent Wardrobe (11 October 2026)
+
+Added an independent seventh direction; A–F render functions and styles are preserved. Shared wiring adds G, a body variant marker for scoped colors, and the seven-option switcher. The share builder now embeds both local images.
+
+Browser checks on the actual self-contained `dist/index.html`:
+
+- All A–G render at 1280 px and 390 px without horizontal page overflow. G also checked at 320, 640 and 768 px. Desktop and phone hero/collection layouts inspected visually.
+- Select Lagos Rain, Citrus Daybreak and Quiet Woods: three samples total ₦9,000. Reject a fourth. Remove Citrus, choose Amber After Hours: ₦11,000. Add edit once, selection clears, three items enter bag. FCT demo delivery produces ₦16,000. Payment step explicitly ends in simulation.
+- Search “hibiscus” across all six scents returns Velvet Hibiscus. Save it and open the saved list; the newer catalog scent is present.
+- Bottle budget ≤ ₦50,000 returns Lagos Rain and Citrus Daybreak. Bottle format uses full bottle pricing; adding Lagos Rain enters the bag at ₦45,000.
+- Gift trio adds three distinct samples, ₦9,000 before delivery. Notes toggle reveals the note profile; ingredient guidance remains separate. Escape closes the guide dialog.
+- Switcher wraps G→A and A→G. The selected variant remains in the URL. Both campaign assets are embedded in the portable build; no relative image files are required.
+- JavaScript syntax checked with `node --check`; no runtime errors captured during the sample flow. Inline HTML preview checked separately.
+
+Limits: browser viewport emulation, not physical-device testing. No screen-reader audit, usability interviews, real catalog, authentication, orders or payments. All monetary values and scent claims are fictional examples. Verdict remains pending user review.
